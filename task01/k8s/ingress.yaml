@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hello-ingress
@@ -9,7 +9,7 @@ spec:
   - host: arch.homework
     http:
       paths:
-        - path: /myapp($|/)(.*)
+        - path: /otusapp/ovodkov($|/)(.*)
           backend:
             serviceName: task01-service
             servicePort: 9000
