@@ -1,15 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-ingress
+  name: task1-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
-  - host: arch.homework
+  - host: "arch.homework"
     http:
       paths:
-        - path: /otusapp/ovodkov($|/)(.*)
+        - pathType: Prefix
+          path: "/otusapp/ovodkov($|/)(.*)"
           backend:
-            serviceName: task01-service
-            servicePort: 9000
+            service:
+              name: task01-service
+              port:
+                number: 9000
