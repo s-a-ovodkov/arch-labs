@@ -2,4 +2,4 @@
 
 ###### Список выполненных заданий:
 
-* [Задание №01](https://github.com/Gravonere/task-microservice-architecture/tree/master/task01)
+* [Задание №01](https://github.com/s-a-ovodkov/arch-labs/tree/main/task01)
