@@ -1,0 +1,10 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: task02
+springdoc:
+  api-docs:
+    path: /api/doc-api
+  swagger-ui:
+    path: /api/swagger.html
