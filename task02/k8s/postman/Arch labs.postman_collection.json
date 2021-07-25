@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "323f9aa2-6548-470b-8238-974679e14d91",
+		"name": "Arch labs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "homework01",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/otusapp/ovodkov/health",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"otusapp",
+						"ovodkov",
+						"health"
+					]
+				},
+				"description": "Домашняя работа #01"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "arch.homework"
+		}
+	]
+}
