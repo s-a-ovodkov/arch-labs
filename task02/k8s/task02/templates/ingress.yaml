@@ -6,13 +6,13 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
-  - host: "arch.homework"
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
         - pathType: Prefix
-          path: "/otusapp/ovodkov($|/)(.*)"
+          path: {{ .Values.ingress.path }}
           backend:
             service:
               name: task02-service
               port:
-                number: 9000
+                number: {{ .Values.ingress.port }}

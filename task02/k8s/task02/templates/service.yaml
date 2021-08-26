@@ -4,9 +4,9 @@ metadata:
   name: task02-service
 spec:
   selector:
-    app: task01
+    app: task02
   ports:
     - protocol: TCP
-      port: 9000
+      port: {{ .Values.service.port }}
       targetPort: http
-  type: NodePort
+  type: {{ .Values.service.type }}

@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task02-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: task02
+  template:
+    metadata:
+      labels:
+        app: task02
+    spec:
+      containers:
+        - name: task02
+          image: {{ .Values.deployment.image }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.deployment.containerPort }}
+          env:
+            - name: SERVER_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: task02-configmap
+                  key: SERVER_PORT
+            - name: POSTGRES_URL
+              valueFrom:
+                secretKeyRef:
+                  name: task02-secret
+                  key: POSTGRES_URL
+            - name: POSTGRES_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: task02-secret
+                  key: POSTGRES_PORT
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: task02-secret
+                  key: POSTGRES_DB
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: task02-secret
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: task02-secret
+                  key: POSTGRES_PASSWORD
