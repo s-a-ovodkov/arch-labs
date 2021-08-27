@@ -15,6 +15,6 @@ spring:
       ddl-auto: none
 springdoc:
   api-docs:
-    path: /api/doc-api
+    path: /doc-api
   swagger-ui:
-    path: /api/swagger.html
+    path: /swagger.html
