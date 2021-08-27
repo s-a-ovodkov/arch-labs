@@ -1,0 +1,24 @@
+postgresql:
+  enabled: true
+  postgresqlDatabase: homework
+  postgresqlUsername: user
+  postgresqlPassword: qwerty
+  service:
+    port: "5432"
+
+secret:
+  db:
+    url: task-postgresql
+
+deployment:
+  image: grandumm/arch-labs:latest
+  containerPort: 8000
+
+service:
+  port: 9000
+  type: NodePort
+
+ingress:
+  host: "arch.homework"
+  path: "/otusapp/ovodkov($|/)(.*)"
+  port: 9000

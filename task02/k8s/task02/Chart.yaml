@@ -1,0 +1,12 @@
+apiVersion: v2
+name: task02
+description: A helm chart with homework №2
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+dependencies:
+  - name: postgresql
+    version: ~10.9.4
+    repository: https://charts.bitnami.com/bitnami
+    tags:
+      - task02-database
