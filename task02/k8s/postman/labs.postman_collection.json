@@ -24,7 +24,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"{{$randomFirstName}}\",\n    \"firstName\": \"Petr\",\n    \"lastName\": \"Petrov\",\n    \"email\": \"{{$randomEmail}}\",\n    \"phone\": \"+79001112232\"\n}",
+					"raw": "{\n    \"username\": \"{{$$randomUserName}}\",\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"phone\": \"+79001112232\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -75,7 +75,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"{{$randomFirstName}}\",\n    \"firstName\": \"Ivan\",\n    \"lastName\": \"Ivanov\",\n    \"email\": \"{{$randomEmail}}\",\n    \"phone\": \"+79001112233\"\n}",
+					"raw": "{\n    \"username\": \"{{$$randomUserName}}\",\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"phone\": \"+79001112232\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
